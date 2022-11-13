@@ -1,0 +1,22 @@
+{{title}}
+<table>
+    <tr>
+        <th>Reference</th>
+        <th>Titre</th>
+        <th>Entreprise</th>
+        <th>Etat</th>
+        
+    </tr>
+    <tr *ngFor="let p of listeEmploi">
+        <td>{{p.reference}}</td>
+        <td>{{p.titre}}</td>
+        <td>{{p.entreprise}}</td>
+        <td>{{p.etat}}</td>
+        <td>
+            <button [disabled]="p.etat == false">Postuler</button>
+            <button (click)="Calcul()">Bilan</button>
+        </td>
+    </tr>
+</table>
+
+        
